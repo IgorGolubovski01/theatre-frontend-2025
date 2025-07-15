@@ -4,6 +4,8 @@ mat-toolbar {
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
+  color: #2e354e; 
+  
 }
 
 .logo {
@@ -25,7 +27,7 @@ mat-toolbar {
 
 a {
   text-decoration: none;
-  color: #393f50;
+  color: #2e354e;
   font-weight: 500;
 }
 
@@ -45,7 +47,7 @@ a {
 .nav-center a {
   position: relative;
   text-decoration: none;
-  color: #a0a0a0;
+  color: #2e354e;
   font-weight: 500;
   transition: color 0.3s ease;
 }
