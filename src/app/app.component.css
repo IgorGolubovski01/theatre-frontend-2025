@@ -1,0 +1,76 @@
+mat-toolbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+}
+
+.auth-links {
+  display: flex;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #393f50;
+  font-weight: 500;
+}
+
+.nav{
+    background-color: #0f1429;
+}
+
+.auth-button{
+  background-color: #6f25b7 !important;
+  color: white !important;
+  transition: background-color 0.3s ease;
+}
+.auth-button:hover {
+  background-color: #5a1d95 !important;
+}
+
+.nav-center a {
+  position: relative;
+  text-decoration: none;
+  color: #a0a0a0;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-center a:hover {
+  color: #b026f4;
+}
+
+.nav-center a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #8e2de2, #b026f4);
+  box-shadow: 0 0 8px #b026f4;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.nav-center a:hover::after {
+  transform: scaleX(1);
+}
+
+
+
