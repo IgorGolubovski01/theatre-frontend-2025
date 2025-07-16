@@ -3,28 +3,21 @@
     <h1 class="table-title">Repertoar</h1>
     <table mat-table [dataSource]="dataSource" class="table">
         
-        <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
-
-        <!-- Position Column -->
         <ng-container matColumnDef="movie">
             <th mat-header-cell *matHeaderCellDef> Movie </th>
             <td mat-cell *matCellDef="let element"> {{element.name}} </td>
         </ng-container>
 
-        <!-- Name Column -->
         <ng-container matColumnDef="genre">
             <th mat-header-cell *matHeaderCellDef> Genre </th>
             <td mat-cell *matCellDef="let element"> {{element.genre.genreName}} </td>
         </ng-container>
 
-        <!-- Weight Column -->
         <ng-container matColumnDef="date">
-            <th mat-header-cell *matHeaderCellDef> Date </th>
-            <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+            <th mat-header-cell *matHeaderCellDef> Date & Time</th>
+            <td mat-cell *matCellDef="let element"> {{utils.formDate(element.projectionDate)}} </td>
         </ng-container>
 
-        <!-- Symbol Column -->
         <ng-container matColumnDef="price">
             <th mat-header-cell *matHeaderCellDef> Price </th>
             <td mat-cell *matCellDef="let element"> {{element.price}}&euro; </td>
@@ -37,14 +30,12 @@
 
         <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef> Action </th>
-            <td mat-cell *matCellDef="let element"> Details </td>
+            <td mat-cell *matCellDef="let element"><a mat-button [routerLink]="['/details/'+element.projectionId]">Details</a></td>
         </ng-container>
-        
-        
-        
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
     </table>
 
 

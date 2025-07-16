@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const client = axios.create({
-    baseURL: 'http://localhost:8080',
+    baseURL: 'http://localhost:8080/projection',
     headers: {
         'Accept' : 'application/json'
     },
@@ -16,15 +16,14 @@ export class ProjectionService{
     
     static async getProjections(){
         return client.request({
-            url: '/projection/getProjections',
+            url: '/getProjections',
             method: 'GET'
         })
     }
 
-
-
-
-
+    static async getProjectionById(id: number){
+        return client.get(`/getProjectionById/${id}`)
+    }
 
 
 
