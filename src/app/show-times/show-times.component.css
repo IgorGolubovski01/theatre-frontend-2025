@@ -4,7 +4,7 @@
   background-color: #0f1429;
   padding-bottom: 40px;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 16px #912ce4;
 }
 
 .table-title {
@@ -25,45 +25,22 @@
   border-radius: 12px;
   overflow: hidden;
   background-color: #121933;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-/* Header and cell styling */
-::ng-deep .mat-header-cell {
-  background-color: #1c223a;
-  color: #c7c9d9;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 16px;
-}
-
-::ng-deep .mat-cell {
-  color: #d6d8e3;
-  font-size: 15px;
-  padding: 14px;
-  border-bottom: 1px solid #2e354e;
-}
-
-/* Rounded corners */
-::ng-deep .mat-header-row:first-child .mat-header-cell:first-child {
-  border-top-left-radius: 12px;
-}
-::ng-deep .mat-header-row:first-child .mat-header-cell:last-child {
-  border-top-right-radius: 12px;
-}
-::ng-deep .mat-row:last-child .mat-cell:first-child {
-  border-bottom-left-radius: 12px;
-}
-::ng-deep .mat-row:last-child .mat-cell:last-child {
-  border-bottom-right-radius: 12px;
-}
-
-/* Hover effect for rows */
-::ng-deep .mat-row:hover {
-  background-color: #1f2744 !important;
-  transition: background-color 0.3s;
-}
-
-/* General font and color */
 * {
   font-family: 'Courier New', Courier, monospace;
 }
+
+.custom-row:hover {
+  background-color: #1d2550;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.details-link {
+  color: #a328ed !important;
+  font-weight: bold;
+}
+

@@ -1,14 +1,40 @@
-<div class="wrapper" *ngIf="dataSource">
-  <p>test</p>
-  <table mat-table [dataSource]="dataSource" class="table">
+<div *ngIf="dataSource" class="wrapper">
+  <div *ngFor="let p of dataSource">
+    <mat-card class="example-card" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>{{ p.name }}</mat-card-title>
+      </mat-card-header>
 
-    <ng-container matColumnDef="movie">
-      <th mat-header-cell *matHeaderCellDef> Movie </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
+      <mat-card-content class="card-body">
+        <div class="text-content">
+          <p>{{ p.longDescription }}</p>
+        </div>
+        <img mat-card-image [src]="'assets/' + p.name + '.jpg'" alt="Movie poster" class="movie-poster">
+      </mat-card-content>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <mat-card-footer class="example-card-footer">
+        <div class="chip-container">
+          <div class="left-chips">
+            <mat-chip>Genre: {{ p.genre.genreName }}</mat-chip>
+            <mat-chip>Directed By: {{ p.director }}</mat-chip>
+            <mat-chip>Price: €{{ p.price }}</mat-chip>
+          </div>
 
-  </table>
+          <div class="right-chip">
+            <mat-chip class="mat-chip-action" *ngIf="service.getActiveUser()">
+              <a [routerLink]="['/purchase', p.projectionId]">
+                <i class="fa-solid fa-cart-shopping"></i> Purchase Ticket
+              </a>
+            </mat-chip>
+
+            <mat-chip class="mat-chip-action" *ngIf="!service.getActiveUser()">
+              <a routerLink="/login">
+                <i class="fa-solid fa-cart-shopping"></i> Purchase Ticket
+              </a>
+            </mat-chip>
+          </div>
+        </div>
+      </mat-card-footer>
+    </mat-card>
+  </div>
 </div>

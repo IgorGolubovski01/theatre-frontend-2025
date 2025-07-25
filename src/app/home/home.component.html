@@ -1,19 +1,52 @@
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="assets/avatar.jpg" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-</mat-card>
+<div *ngIf="projections" class="projections-wrapper">
+
+  <div class="filters-container">
+    <select [(ngModel)]="selectedGenre" (change)="applyFilters()">
+      <option value="">All Genres</option>
+      <option *ngFor="let genre of genres" [value]="genre">{{genre}}</option>
+    </select>
+
+    <select [(ngModel)]="selectedDirector" (change)="applyFilters()">
+      <option value="">All Directors</option>
+      <option *ngFor="let director of directors" [value]="director">{{director}}</option>
+    </select>
+  </div>
+
+  <div class="search-container">
+    <input
+      type="text"
+      placeholder="Search..."
+      [(ngModel)]="searchTerm"
+      (input)="applyFilters()"
+    />
+  </div>
+
+  <div class="projections-container">
+    <mat-card class="example-card" appearance="outlined" *ngFor="let p of filteredProjections">
+      <img mat-card-image [src]="'assets/' + p.name + '.jpg'" alt="Movie poster" class="movie-poster">
+
+      <mat-card-content>
+        <h1 class="movie-title">{{p.name}}</h1>
+        <p><strong>Date & Time:</strong> {{ p.projectionDate | date:'MMMM d, y - HH:mm' }}</p>
+        <p>Genre: {{p.genre.genreName}}</p>
+        <p><strong>Duration:</strong> {{p.duration}}</p>
+        <p><strong>Directed by:</strong> {{p.director}}</p>
+        <p><strong>Price:</strong> €{{p.price}}</p>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <a mat-button class="btn-purple details-btn" [routerLink]="['/details/', p.projectionId]">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Details
+        </a>
+        <button mat-button class="btn-purple book-btn" *ngIf="service.getActiveUser()">
+          <i class="fa-solid fa-cart-shopping"></i> Purchase Ticket
+        </button>
+
+        <a mat-button class="btn-purple book-btn" routerLink="/login" *ngIf="!service.getActiveUser()">
+          <i class="fa-solid fa-cart-shopping"></i> Purchase Ticket
+        </a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+</div>

@@ -1,18 +1,19 @@
-  <mat-toolbar class="nav">
+<mat-toolbar>
+  <span class="logo">1001 Films</span>
 
-    <span class="logo">My Application</span>
+  <div class="nav-center">
+    <a routerLink="/home" (click)="scrollToTop()"><i class="fa-solid fa-house"></i> Home</a>
+    <a routerLink="/show-times"><i class="fa-solid fa-calendar"></i> Show Times</a>
+    <a routerLink="/contact"><i class="fa-solid fa-share-nodes"></i> Contact</a>
+    <a routerLink="/about"><i class="fa-solid fa-circle-info"></i> About Us</a>
+    <a routerLink="/my-tickets" *ngIf="service.getActiveUser()"><i class="fa-solid fa-ticket"></i> My Tickets</a>
+  </div>
 
-    <div class="nav-center">
-      <a routerLink="/home">Home</a>
-      <a routerLink="/show-times">Show Times</a>
-      <a routerLink="/contact">Contact</a>
-      <a routerLink="/about">About Us</a>
-    </div>
+  <div class="auth-links">
+    <button routerLink="/login" mat-flat-button class="auth-button" *ngIf="!service.getActiveUser()">Log in</button>
+    <button routerLink="/signup" mat-flat-button class="auth-button" *ngIf="!service.getActiveUser()">Sign up</button>
+    <button mat-flat-button class="auth-button" *ngIf="service.getActiveUser()" (click)="doLogout()">Log out</button>
+  </div>
+</mat-toolbar>
 
-    <div class="auth-links">
-      <button mat-flat-button class="auth-button">Log in</button>
-      <button mat-flat-button class="auth-button">Sign up</button>
-    </div>
-
-  </mat-toolbar> 
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>

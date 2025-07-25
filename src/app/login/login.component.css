@@ -1,38 +1,64 @@
-.example-card {
-    width: 100%;
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+.auth-card {
     margin-top: 50px;
-    background-color: #0f1429;
-    color: #7780a0;
-    font-weight: bold;
-    height: 500px;
-}
-
-h1 {
-    margin-left: auto;
-    margin-right: auto;
-    color: #2e354e;
-}
-
-mat-card-content{
+    max-width: 480px;
     margin-left: auto;
     margin-right: auto;
     background-color: #0f1429;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #6f25b7;
+    padding: 16px;
+}
+
+.header {
+    background-color: transparent;
+    text-align: center;
+}
+
+.header h1 {
+    color: #351661;
+    font-size: 1.8rem;
+    margin: 16px 0;
+    margin-bottom: 45px;
+}
+
+.content {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+mat-form-field.full-width {
+    width: 100%;
 }
 
 
 
-p {
-    font-weight: 400;
+.action {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding: 0 8px;
 }
 
-
-
-button{
-    margin-left: auto;
-    margin-right: auto;
+button[mat-button],
+a[mat-button] {
+    color: #351661;
 }
 
+button[mat-flat-button] {
+    background-color: #351661;
+    color: white;
+    border-radius: 6px;
+    padding: 6px 16px;
+    transition: background-color 0.3s ease;
+}
 
+button[mat-flat-button]:hover {
+    background-color: #6f25b7;
+}
+
+mat-label {
+    color: #6f25b7
+}

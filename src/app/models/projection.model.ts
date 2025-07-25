@@ -1,10 +1,11 @@
 import { ActorModel } from "./actor.model";
+import { GenreModel } from "./genre.model";
 
 export interface ProjectionModel{
     projectionId: number;
     name: string;
     description: string;
-    genre: string;
+    genre: GenreModel;
     duration: string;
     director: string;
     actors: ActorModel[];
@@ -14,7 +15,7 @@ export interface ProjectionModel{
     rating: number;
     projectionCapacity: number;
     soldTickets: number;
-    imageUrl?: string;
+    longDescription: string;
 
 
 }
