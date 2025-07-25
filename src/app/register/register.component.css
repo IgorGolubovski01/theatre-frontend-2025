@@ -1,0 +1,57 @@
+.register-panel {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 24px 30px; /* added more horizontal padding */
+  background-color: #121933;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px #912ce4;
+  color: #d1ccff;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.register-panel h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.register-panel label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.register-panel input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #a328ed;
+  background-color: #070b1c;
+  color: #d1ccff;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box; /* make sure padding is included in width */
+  transition: border-color 0.3s ease;
+}
+
+.register-panel input:focus {
+  border-color: #7a1fc0;
+  box-shadow: 0 0 8px #7a1fc0;
+}
+
+.register-panel button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #a328ed;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-panel button:hover {
+  background-color: #7a1fc0;
+}

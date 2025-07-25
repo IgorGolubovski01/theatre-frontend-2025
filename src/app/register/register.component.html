@@ -1,1 +1,15 @@
-<p>register works!</p>
+<div class="register-panel">
+  <h2>Register</h2>
+  <form>
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" placeholder="Enter username" [(ngModel)]="username" />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter email" [(ngModel)]="email" />
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Enter password" [(ngModel)]="password" />
+
+    <button type="submit">Register</button>
+  </form>
+</div>

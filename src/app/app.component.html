@@ -11,7 +11,7 @@
 
   <div class="auth-links">
     <button routerLink="/login" mat-flat-button class="auth-button" *ngIf="!service.getActiveUser()">Log in</button>
-    <button routerLink="/signup" mat-flat-button class="auth-button" *ngIf="!service.getActiveUser()">Sign up</button>
+    <button routerLink="/register" mat-flat-button class="auth-button" *ngIf="!service.getActiveUser()">Register</button>
     <button mat-flat-button class="auth-button" *ngIf="service.getActiveUser()" (click)="doLogout()">Log out</button>
   </div>
 </mat-toolbar>
