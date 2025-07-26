@@ -8,6 +8,11 @@
       <mat-card-content class="card-body">
         <div class="text-content">
           <p>{{ p.longDescription }}</p>
+          <p>Actors:
+            <span *ngFor="let a of p.actors; let last = last">
+              {{ a.name }}<span *ngIf="!last">, </span>
+            </span>
+          </p>
         </div>
         <img mat-card-image [src]="'assets/' + p.name + '.jpg'" alt="Movie poster" class="movie-poster">
       </mat-card-content>
