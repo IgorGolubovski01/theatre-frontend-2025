@@ -19,9 +19,13 @@ export class LoginComponent {
 
   constructor(private router: Router) {
     if (UserService.getActiveUser()) {
-      router.navigate(['/user'])
+      router.navigate(['/user']) 
+      //todo
+      // Sta radi ovaj router.navigate???
       return
     }
+
+
 
   }
 

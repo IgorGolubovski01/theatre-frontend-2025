@@ -6,6 +6,8 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { UserModel } from '../models/user.model';
 import { UserService } from '../services/user.service';
+import { Router, RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-register',
@@ -15,11 +17,14 @@ import { UserService } from '../services/user.service';
 })
 
 export class RegisterComponent {
+
+  constructor(private router: Router) { }
+
   public username: string = ''
   public email: string = ''
   public password: string = ''
 
-  onRegister(){
+  onRegister() {
     const user: UserModel = {
       username: this.username,
       email: this.email,
@@ -27,20 +32,30 @@ export class RegisterComponent {
     }
 
     UserService.register(user)
-    .then(response => {
-      alert(response.data)
-    })
-    .catch(error => {
-      if(error.response.status === 409){
-        alert(error.response.data)
-      }else{
-        alert('Unexpected error')
-      }
-    })
-
+      .then(response => {
+        // Registration successful, now log in
+        UserService.login(user.email, user.password)
+          .then(success => {
+            if (success) {
+              alert('Registration successful');
+              this.router.navigate(['home']);
+            } else {
+              alert('Registered, but failed to log in.');
+            }
+          });
+      })
+      .catch(error => {
+        if (error.response.status === 409) {
+          alert(error.response.data);
+        } else {
+          alert('Unexpected error');
+        }
+      });
   }
 
-
-
-
 }
+
+
+
+
+
