@@ -1,4 +1,4 @@
 export interface TestUserModel{
-    email: string,
+    email: string
     password: string
 }
