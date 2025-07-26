@@ -6,13 +6,13 @@
     <a routerLink="/show-times"><i class="fa-solid fa-calendar"></i> Show Times</a>
     <a routerLink="/contact"><i class="fa-solid fa-share-nodes"></i> Contact</a>
     <a routerLink="/about"><i class="fa-solid fa-circle-info"></i> About Us</a>
-    <a routerLink="/my-tickets" *ngIf="service.getActiveUser()"><i class="fa-solid fa-ticket"></i> My Tickets</a>
+    <a routerLink="/my-tickets" *ngIf="userService.getActiveUser()"><i class="fa-solid fa-ticket"></i> My Tickets</a>
   </div>
 
   <div class="auth-links">
-    <button routerLink="/login" mat-flat-button class="auth-button" *ngIf="!service.getActiveUser()">Log in</button>
-    <button routerLink="/register" mat-flat-button class="auth-button" *ngIf="!service.getActiveUser()">Register</button>
-    <button mat-flat-button class="auth-button" *ngIf="service.getActiveUser()" (click)="doLogout()">Log out</button>
+    <button routerLink="/login" mat-flat-button class="auth-button" *ngIf="!userService.getActiveUser()">Log in</button>
+    <button routerLink="/register" mat-flat-button class="auth-button" *ngIf="!userService.getActiveUser()">Register</button>
+    <button mat-flat-button class="auth-button" *ngIf="userService.getActiveUser()" (click)="doLogout()">Log out</button>
   </div>
 </mat-toolbar>
 

@@ -25,12 +25,19 @@ export class LoginComponent {
 
   }
 
-  public doLogin(){
-    if(UserService.login(this.email, this.password)){
-      this.router.navigate(['/user'])
-      return
+  public async doLogin() {
+    const success = await UserService.login(this.email, this.password);
+
+    if (success) {
+      this.router.navigate(['home'])
+    } else {
+      alert('Bad credentials.')
     }
 
-    alert('Bad credentials.')
+
+
   }
+
+
+
 }

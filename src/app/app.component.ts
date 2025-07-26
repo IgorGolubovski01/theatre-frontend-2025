@@ -16,7 +16,7 @@ import { filter } from 'rxjs/operators';
 export class AppComponent {
   title = 'theatre-frontend-2025';
 
-  public service = UserService
+  public userService = UserService
 
   public constructor(private router: Router){
     this.router.events.pipe(
