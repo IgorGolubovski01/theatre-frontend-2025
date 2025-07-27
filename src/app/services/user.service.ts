@@ -1,4 +1,3 @@
-import { TestUserModel } from "../models/test.user.model";
 import axios from "axios";
 import { UserModel } from "../models/user.model";
 
@@ -12,6 +11,7 @@ const client = axios.create({
 })
 
 export class UserService {
+
 
     static async register(user: UserModel) {
         return client.post('/register', user)

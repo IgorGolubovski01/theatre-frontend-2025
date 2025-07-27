@@ -27,7 +27,6 @@
             color="primary"
             [disabled]="
               !userService.getActiveUser() ||
-              ticketQuantity < 1 ||
               ticketQuantity > (p.projectionCapacity - p.soldTickets)
             "
             (click)="onAddToCart(p.projectionId, ticketQuantity)"

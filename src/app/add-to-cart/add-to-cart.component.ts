@@ -7,6 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-add-to-cart',
@@ -15,7 +16,8 @@ import { NgFor, NgIf } from '@angular/common';
   imports: [MatCardModule, MatInputModule, FormsModule, NgFor, NgIf]
 })
 export class AddToCartComponent {
-  userService = UserService;
+  userService = UserService
+  cartService = CartService
 
   dataSource: ProjectionModel[] | null = null;
   ticketQuantity: number = 1;
@@ -30,17 +32,7 @@ export class AddToCartComponent {
     });
   }
 
-  onAddToCart(projectionId: number, quantity: number) {
-    if (!this.userService.getActiveUser()) {
-      this.router.navigate(['/login']);
-      return;
-    }
-
-    const availableTickets = this.dataSource![0].projectionCapacity - this.dataSource![0].soldTickets;
-    if (quantity < 1 || quantity > availableTickets) {
-      return;
-    }
-
-    this.router.navigate(['/add-to-cart', projectionId, quantity]);
+  onAddToCart() {
+    this.cartService.addToCart()
   }
 }
