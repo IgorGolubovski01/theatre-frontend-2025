@@ -1,0 +1,96 @@
+.wrapper {
+  margin-top: 100px;
+}
+
+.example-card {
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: #070b1c;
+  border: 1px solid #992be8;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px #a328ed;
+  transition: transform 0.2s ease-in-out;
+}
+
+mat-card-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #a328ed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10px;
+  margin-bottom: 30px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.text-content {
+  flex: 2;
+}
+
+.text-content p {
+  font-size: 16px;
+  color: #d1ccff;
+  line-height: 1.5;
+}
+
+.movie-poster {
+  flex: 1;
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 0 12px rgba(163, 40, 237, 0.6);
+  margin: 15px 15px 30px 15px;
+  display: block;
+}
+
+.example-card-footer {
+  padding: 10px 16px;
+  border-top: 1px solid #992be8;
+  background-color: #992be8;
+  border-radius: 0 0 16px 16px;
+  margin-top: 30px;
+}
+
+.chip-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.left-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.right-chip {
+  display: flex;
+  margin-left: auto;
+}
+
+.mat-chip-action {
+  background-color: #a328ed !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+.mat-chip-action a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mat-chip-action i {
+  color: white;
+}

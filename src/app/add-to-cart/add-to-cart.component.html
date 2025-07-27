@@ -7,7 +7,6 @@
 
       <mat-card-content class="card-body">
         <div class="text-content">
-          <p>{{ p.longDescription }}</p>
           <p>Actors:
             <span *ngFor="let a of p.actors; let last = last">
               {{ a.name }}<span *ngIf="!last">, </span>
@@ -20,19 +19,17 @@
       <mat-card-footer class="example-card-footer">
         <div class="chip-container">
           <div class="left-chips">
-            <mat-chip>Genre: {{ p.genre.genreName }}</mat-chip>
-            <mat-chip>Directed By: {{ p.director }}</mat-chip>
-            <mat-chip>Price: €{{ p.price }}</mat-chip>
+            
           </div>
 
           <div class="right-chip">
-            <mat-chip class="mat-chip-action" *ngIf="service.getActiveUser()">
+            <mat-chip class="mat-chip-action" *ngIf="userService.getActiveUser()">
               <a [routerLink]="['/add-to-cart', p.projectionId]">
                 <i class="fa-solid fa-cart-shopping"></i> Add To Cart
               </a>
             </mat-chip>
 
-            <mat-chip class="mat-chip-action" *ngIf="!service.getActiveUser()">
+            <mat-chip class="mat-chip-action" *ngIf="!userService.getActiveUser()">
               <a routerLink="/login">
                 <i class="fa-solid fa-cart-shopping"></i> Add To Cart
               </a>

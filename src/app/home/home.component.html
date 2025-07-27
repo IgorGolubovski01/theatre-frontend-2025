@@ -38,12 +38,12 @@
         <a mat-button class="btn-purple details-btn" [routerLink]="['/details/', p.projectionId]">
           <i class="fa-solid fa-arrow-up-right-from-square"></i> Details
         </a>
-        <button mat-button class="btn-purple book-btn" *ngIf="service.getActiveUser()">
-          <i class="fa-solid fa-cart-shopping"></i> Purchase Ticket
+        <button mat-button class="btn-purple book-btn" routerLink="/add-to-cart" *ngIf="service.getActiveUser()">
+          <i class="fa-solid fa-cart-shopping"></i> Add To Cart
         </button>
 
-        <a mat-button class="btn-purple book-btn" routerLink="/login" *ngIf="!service.getActiveUser()">
-          <i class="fa-solid fa-cart-shopping"></i> Purchase Ticket
+        <a mat-button class="btn-purple book-btn" routerLink="/add-to-cart" *ngIf="!service.getActiveUser()">
+          <i class="fa-solid fa-cart-shopping"></i> Add To Cart
         </a>
       </mat-card-actions>
     </mat-card>
