@@ -4,17 +4,21 @@
       <mat-card-header>
         <mat-card-title>{{ p.name }}</mat-card-title>
       </mat-card-header>
-
+      
       <mat-card-content class="card-body">
         <div class="text-content">
           <p>{{ p.longDescription }}</p>
+          <p>Duration: {{p.duration}}min.</p>
+          <p>Projection date: {{utilService.formDate(p.projectionDate.toString())}}</p>
           <p>Actors:
             <span *ngFor="let a of p.actors; let last = last">
               {{ a.name }}<span *ngIf="!last">, </span>
             </span>
           </p>
         </div>
-        <img mat-card-image [src]="'assets/' + p.name + '.jpg'" alt="Movie poster" class="movie-poster">
+        <!-- TODO -->
+        <!-- Promeniti u p.name  -->
+        <img mat-card-image [src]="'assets/' + 'The Unknown' + '.jpg'" alt="Movie poster" class="movie-poster">
       </mat-card-content>
 
       <mat-card-footer class="example-card-footer">

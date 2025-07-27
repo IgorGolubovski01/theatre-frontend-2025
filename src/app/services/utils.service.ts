@@ -9,5 +9,5 @@ export class UtilsService{
 
     public formDate(iso: string){
         return new Date(iso).toLocaleString('sr-RS')
-    }
+    }   
 }

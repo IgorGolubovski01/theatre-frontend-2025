@@ -9,6 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { UserService } from '../services/user.service';
+import { UtilsService } from '../services/utils.service';
 
 @Component({
   selector: 'app-details',
@@ -27,7 +28,7 @@ export class DetailsComponent {
   displayedColumns: string[] = ['movie'];
   dataSource: ProjectionModel[] | null = null
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, public utilService: UtilsService) {
     route.params.subscribe(params => {
       ProjectionService.getProjectionById(params['id'])
         .then(rsp => {

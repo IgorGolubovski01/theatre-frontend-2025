@@ -2,41 +2,40 @@
   <div *ngFor="let p of dataSource">
     <mat-card class="example-card" appearance="outlined">
       <mat-card-header>
-        <mat-card-title>{{ p.name }}</mat-card-title>
+        <mat-card-title>Tickets for: {{ p.name }}</mat-card-title>
       </mat-card-header>
 
       <mat-card-content class="card-body">
         <div class="text-content">
-          <p>Actors:
-            <span *ngFor="let a of p.actors; let last = last">
-              {{ a.name }}<span *ngIf="!last">, </span>
-            </span>
-          </p>
+          
+
+          <mat-form-field appearance="fill" class="ticket-input">
+            <mat-label>Ticket Quantity</mat-label>
+            <input
+              matInput
+              type="number"
+              [(ngModel)]="ticketQuantity"
+              [min]="1"
+              [max]="p.projectionCapacity - p.soldTickets"
+              required
+            />
+            <mat-hint>Available: {{ p.projectionCapacity - p.soldTickets }}</mat-hint>
+          </mat-form-field>
+
+          <button
+            mat-raised-button
+            color="primary"
+            [disabled]="
+              !userService.getActiveUser() ||
+              ticketQuantity < 1 ||
+              ticketQuantity > (p.projectionCapacity - p.soldTickets)
+            "
+            (click)="onAddToCart(p.projectionId, ticketQuantity)"
+          >
+            <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+          </button>
         </div>
-        <img mat-card-image [src]="'assets/' + p.name + '.jpg'" alt="Movie poster" class="movie-poster">
       </mat-card-content>
-
-      <mat-card-footer class="example-card-footer">
-        <div class="chip-container">
-          <div class="left-chips">
-            
-          </div>
-
-          <div class="right-chip">
-            <mat-chip class="mat-chip-action" *ngIf="userService.getActiveUser()">
-              <a [routerLink]="['/add-to-cart', p.projectionId]">
-                <i class="fa-solid fa-cart-shopping"></i> Add To Cart
-              </a>
-            </mat-chip>
-
-            <mat-chip class="mat-chip-action" *ngIf="!userService.getActiveUser()">
-              <a routerLink="/login">
-                <i class="fa-solid fa-cart-shopping"></i> Add To Cart
-              </a>
-            </mat-chip>
-          </div>
-        </div>
-      </mat-card-footer>
     </mat-card>
   </div>
 </div>

@@ -13,17 +13,14 @@
   </div>
 
   <div class="search-container">
-    <input
-      type="text"
-      placeholder="Search..."
-      [(ngModel)]="searchTerm"
-      (input)="applyFilters()"
-    />
+    <input type="text" placeholder="Search..." [(ngModel)]="searchTerm" (input)="applyFilters()" />
   </div>
 
   <div class="projections-container">
     <mat-card class="example-card" appearance="outlined" *ngFor="let p of filteredProjections">
-      <img mat-card-image [src]="'assets/' + p.name + '.jpg'" alt="Movie poster" class="movie-poster">
+      <!-- TODO -->
+      <!-- Promeniti u p.name  -->
+      <img mat-card-image [src]="'assets/' + 'The Unknown' + '.jpg'" alt="Movie poster" class="movie-poster">
 
       <mat-card-content>
         <h1 class="movie-title">{{p.name}}</h1>

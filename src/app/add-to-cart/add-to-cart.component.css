@@ -1,5 +1,6 @@
 .wrapper {
   margin-top: 100px;
+  padding: 0 20px;
 }
 
 .example-card {
@@ -22,75 +23,79 @@ mat-card-title {
 }
 
 .card-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 24px;
+  padding: 10px 0;
 }
 
 .text-content {
-  flex: 2;
-}
-
-.text-content p {
-  font-size: 16px;
-  color: #d1ccff;
-  line-height: 1.5;
-}
-
-.movie-poster {
-  flex: 1;
-  max-width: 300px;
-  height: auto;
-  border-radius: 12px;
-  object-fit: contain;
-  box-shadow: 0 0 12px rgba(163, 40, 237, 0.6);
-  margin: 15px 15px 30px 15px;
-  display: block;
-}
-
-.example-card-footer {
-  padding: 10px 16px;
-  border-top: 1px solid #992be8;
-  background-color: #992be8;
-  border-radius: 0 0 16px 16px;
-  margin-top: 30px;
-}
-
-.chip-container {
   display: flex;
-  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
+  padding: 0 12px; /* Added padding so input/button don't touch edges */
+  box-sizing: border-box;
 }
 
-.left-chips {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
+/* Equal width for input and button */
+.ticket-input,
+button[mat-raised-button] {
+  flex: 1 1 0;
+  box-sizing: border-box;
 }
 
-.right-chip {
-  display: flex;
-  margin-left: auto;
+/* Fix height without breaking input layout */
+mat-form-field.ticket-input {
+  width: 100%;
+  background-color: #1c1e38;
+  border-radius: 8px;
 }
 
-.mat-chip-action {
-  background-color: #a328ed !important;
-  color: white !important;
+/* Let Angular Material handle height naturally */
+.ticket-input .mat-form-field-wrapper {
+  padding-bottom: 0; /* remove extra space below input */
+}
+
+/* Adjust input text */
+input.mat-input-element {
+  color: #a328ed;
+  font-weight: 600;
+  padding: 14px 14px 14px 14px; /* standard vertical + horizontal padding */
+  box-sizing: border-box;
+}
+
+/* Label and hint colors */
+mat-label,
+mat-hint {
+  color: #d595fa !important;
+}
+
+/* Style button */
+button[mat-raised-button] {
+  background-color: #a328ed;
+  color: white;
   font-weight: bold;
-}
-
-.mat-chip-action a {
-  color: white;
-  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 0 10px #a328ed;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  padding: 0 16px;
+  min-width: 0;
+  height: 56px; /* match default Angular Material height */
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
 }
 
-.mat-chip-action i {
-  color: white;
+/* Button hover */
+button[mat-raised-button]:hover:not(:disabled) {
+  background-color: #c84eff;
+  box-shadow: 0 0 15px #c84eff;
+  cursor: pointer;
 }
+
+/* Disabled button */
+button[mat-raised-button]:disabled {
+  background-color: #5b2d8a;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+  
