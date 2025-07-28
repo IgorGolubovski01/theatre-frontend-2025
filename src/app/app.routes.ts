@@ -6,8 +6,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
-import { PurchaseComponent } from './purchase/purchase.component';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
+import { MyTicketsComponent } from './my-tickets/my-tickets.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -18,7 +18,7 @@ export const routes: Routes = [
     { path: 'register', component: RegisterComponent},
     { path: 'contact', component: ContactComponent},
     { path: 'about', component: AboutComponent},
-    { path: 'purchase', component: PurchaseComponent},
     { path: 'add-to-cart/:id', component: AddToCartComponent},
+    { path: 'my-tickets', component: MyTicketsComponent },
     { path: '**', redirectTo: '' }
 ];

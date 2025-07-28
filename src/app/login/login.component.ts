@@ -33,12 +33,11 @@ export class LoginComponent {
     const success = await UserService.login(this.email, this.password);
 
     if (success) {
+      console.log('Before navigation, localStorage:', localStorage.getItem('active'));
       this.router.navigate(['home'])
     } else {
       alert('Bad credentials.')
     }
-
-
 
   }
 

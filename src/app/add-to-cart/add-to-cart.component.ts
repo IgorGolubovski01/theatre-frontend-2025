@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
 import { CartService } from '../services/cart.service';
+import { AddToCartModel } from '../models/addToCart.model';
 
 @Component({
   selector: 'app-add-to-cart',
@@ -32,7 +33,26 @@ export class AddToCartComponent {
     });
   }
 
-  onAddToCart() {
-    this.cartService.addToCart()
+  onAddToCart() { 
+    const user = this.userService.getActiveUser();
+    if(!user || !this.dataSource){
+      alert("Must be logged in.")
+      return
+    }
+
+    const userId = user.id
+    const projectionId = this.dataSource[0].projectionId
+    const quantity = this.ticketQuantity
+
+    const addToCartModel: AddToCartModel = {
+      userId,
+      projectionId,
+      quantity
+    }
+    
+    this.cartService.addToCart(addToCartModel)
+    alert("Tickets added to cart.")
   }
+
 }
+

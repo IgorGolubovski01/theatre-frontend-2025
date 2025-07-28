@@ -1,0 +1,31 @@
+.my-tickets-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 24px;
+}
+
+.clickable-card {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  margin-top: 100px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px 4px rgba(163, 40, 237, 0.5); /* subtle purple glow */
+}
+
+.clickable-card:hover {
+  box-shadow: 0 0 30px 10px rgba(163, 40, 237, 0.8); /* stronger purple glow */
+  transform: translateY(-4px);
+}
+
+mat-card-title{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #2e354e;
+}

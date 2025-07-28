@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { UserModel } from '../models/user.model';
 import { UserService } from '../services/user.service';
 import { Router, RouterLink } from '@angular/router';
-
+import { RegisterModel } from '../models/register.model';
 
 @Component({
   selector: 'app-register',
@@ -25,15 +25,16 @@ export class RegisterComponent {
   public password: string = ''
 
   onRegister() {
-    const user: UserModel = {
+
+    const user: RegisterModel = {
       username: this.username,
       email: this.email,
       password: this.password
     }
 
+
     UserService.register(user)
       .then(response => {
-        // Registration successful, now log in
         UserService.login(user.email, user.password)
           .then(success => {
             if (success) {

@@ -42,12 +42,12 @@ export class HomeComponent {
   public error: string | null = null;
 
   constructor(private datePipe: DatePipe) {
+    console.log(localStorage)
     ProjectionService.getProjections()
       .then(rsp => {
         this.projections = rsp.data;
         this.filteredProjections = this.projections;
 
-        // Extract unique genres and directors for dropdowns
         this.genres = Array.from(new Set(this.projections!.map(p => p.genre.genreName))).sort();
         this.directors = Array.from(new Set(this.projections!.map(p => p.director))).sort();
       })
