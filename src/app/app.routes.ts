@@ -8,6 +8,8 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 import { MyTicketsComponent } from './my-tickets/my-tickets.component';
+import { MyCartComponent } from './my-cart/my-cart.component';
+import { MyPurchasesComponent } from './my-purchases/my-purchases.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -20,5 +22,7 @@ export const routes: Routes = [
     { path: 'about', component: AboutComponent},
     { path: 'add-to-cart/:id', component: AddToCartComponent},
     { path: 'my-tickets', component: MyTicketsComponent },
+    { path: 'my-cart', component: MyCartComponent },
+    { path: 'my-purchases', component: MyPurchasesComponent },
     { path: '**', redirectTo: '' }
 ];

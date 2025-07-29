@@ -1,9 +1,9 @@
 <div class="my-tickets-wrapper">
-  <mat-card class="clickable-card" appearance="outlined" (click)="goToCart()">
+  <mat-card routerLink="/my-cart" class="clickable-card" appearance="outlined">
     <mat-card-title>My Cart</mat-card-title>
   </mat-card>
 
-  <mat-card class="clickable-card" appearance="outlined" (click)="goToPurchases()">
+  <mat-card routerLink="/my-purchases" class="clickable-card" appearance="outlined">
     <mat-card-title>Purchases</mat-card-title>
   </mat-card>
 </div>

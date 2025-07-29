@@ -16,6 +16,18 @@ export class CartService {
         return client.post('/addToCart', addToCart)
     }
 
+    static async getCartItems(userId: number) {
+        return client.get(`/getCartTickets/${userId}`)
+    }
+
+    static async getPurchasedItems(userId: number) {
+        return client.get(`/getPurchasedTickets/${userId}`)
+    }
+
+    static async deleteOrderById(orderId: number){
+        return client.delete(`/deleteOrder/${orderId}`)
+    }
+
 
 
 

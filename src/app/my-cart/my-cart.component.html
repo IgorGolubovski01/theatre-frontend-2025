@@ -1,0 +1,20 @@
+<div class="wrap">
+<mat-card class="order-card" appearance="outlined" *ngFor="let o of orders">
+  <div class="order-header">
+    <img src="/assets/The Unknown.jpg" class="order-img" />
+    <div class="order-text">
+      <h3 class="order-title">Order for: {{ o.projectionName }}</h3>
+      <p class="order-date">{{ o.orderDate | date: 'medium' }}</p>
+      <p class="order-quantity">Quantity: {{ o.tickets.length }}</p>
+      <p class="order-price">Total price: {{ o.tickets.length * 5 }}$</p>
+    </div>
+  </div>
+
+  <mat-card-actions>
+    <button class="purchase-btn">Purchase</button>
+    <button class="cancel-btn" (click)="deleteCart(o.orderId)">Cancel</button>
+  </mat-card-actions>
+</mat-card>
+
+
+</div>
