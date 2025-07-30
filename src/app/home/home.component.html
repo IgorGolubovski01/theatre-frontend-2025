@@ -1,3 +1,12 @@
+<div *ngIf="error" class="error-class">
+    <mat-card class="err" appearance="outlined" color="red">
+        <mat-card-content>
+            <h1>Oops, an error has occured!</h1>
+            <p style="color:red;">{{error}}</p>
+        </mat-card-content>
+    </mat-card> 
+</div>
+
 <div *ngIf="projections" class="projections-wrapper">
 
   <div class="filters-container">
@@ -48,4 +57,4 @@
 
 </div>
 
-<app-loading *ngIf="!projections" />
+<app-loading *ngIf="!projections && !error" />

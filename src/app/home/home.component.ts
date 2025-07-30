@@ -44,7 +44,6 @@ export class HomeComponent {
   public error: string | null = null;
 
   constructor(private datePipe: DatePipe) {
-    console.log(localStorage)
     ProjectionService.getProjections()
       .then(rsp => {
         this.projections = rsp.data;

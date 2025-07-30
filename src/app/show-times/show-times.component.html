@@ -1,3 +1,12 @@
+<div *ngIf="error" class="error-class">
+    <mat-card class="err" appearance="outlined" color="red">
+        <mat-card-content>
+            <h1>Oops, an error has occured!</h1>
+            <p style="color:red;">{{error}}</p>
+        </mat-card-content>
+    </mat-card> 
+</div>
+
 <div class="wrapper" *ngIf="dataSource">
   <h1 class="table-title">Repertoar</h1>
 
