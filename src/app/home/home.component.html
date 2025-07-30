@@ -39,7 +39,7 @@
              Add To Cart
         </button>
 
-        <a mat-button class="btn-purple book-btn" routerLink="/add-to-cart" *ngIf="!service.getActiveUser()">
+        <a mat-button class="btn-purple book-btn" routerLink="/login" *ngIf="!service.getActiveUser()">
           <i class="fa-solid fa-cart-shopping"></i> Add To Cart
         </a>
       </mat-card-actions>
@@ -47,3 +47,5 @@
   </div>
 
 </div>
+
+<app-loading *ngIf="!projections" />

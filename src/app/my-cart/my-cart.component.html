@@ -11,7 +11,7 @@
   </div>
 
   <mat-card-actions>
-    <button class="purchase-btn">Purchase</button>
+    <button class="purchase-btn" (click)="purchase(o.orderId)">Purchase</button>
     <button class="cancel-btn" (click)="deleteCart(o.orderId)">Cancel</button>
   </mat-card-actions>
 </mat-card>

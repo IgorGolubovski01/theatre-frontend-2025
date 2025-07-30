@@ -28,6 +28,10 @@ export class CartService {
         return client.delete(`/deleteOrder/${orderId}`)
     }
 
+    static async purchaseOrder(orderId: number){
+        return client.post(`/purchaseOrder/${orderId}`)
+    }
+
 
 
 

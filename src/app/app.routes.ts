@@ -10,6 +10,7 @@ import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 import { MyTicketsComponent } from './my-tickets/my-tickets.component';
 import { MyCartComponent } from './my-cart/my-cart.component';
 import { MyPurchasesComponent } from './my-purchases/my-purchases.component';
+import { LoadingComponent } from './loading/loading.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -24,5 +25,6 @@ export const routes: Routes = [
     { path: 'my-tickets', component: MyTicketsComponent },
     { path: 'my-cart', component: MyCartComponent },
     { path: 'my-purchases', component: MyPurchasesComponent },
+    { path: 'loading', component: LoadingComponent },
     { path: '**', redirectTo: '' }
 ];

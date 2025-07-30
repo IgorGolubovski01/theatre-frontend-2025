@@ -9,6 +9,7 @@ import { DatePipe, NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { FormsModule } from '@angular/forms';
+import { LoadingComponent } from '../loading/loading.component';
 
 @Component({
   selector: 'app-home',
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     RouterLink,
     DatePipe,
     FormsModule,
+    LoadingComponent
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],

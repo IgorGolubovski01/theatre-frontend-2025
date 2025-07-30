@@ -16,6 +16,7 @@ import { UtilsService } from '../services/utils.service';
 })
 export class MyCartComponent {
 
+
   orders: OrderModel[] = [];
   service = UtilsService
   constructor() {
@@ -55,14 +56,25 @@ export class MyCartComponent {
       });
   }
 
-
   deleteCart(id: number) {
-  CartService.deleteOrderById(id)
-    .then(() => {
-      this.orders = this.orders.filter(order => order.orderId !== id);
-    })
-    .catch(err => {
-      console.error('Failed to delete order:', err);
-    });
-}
+    CartService.deleteOrderById(id)
+      .then(() => {
+        this.orders = this.orders.filter(order => order.orderId !== id);
+      })
+      .catch(err => {
+        console.error('Failed to delete order:', err);
+      });
+  }
+
+  async purchase(orderId: number) {
+
+    try {
+      await CartService.purchaseOrder(orderId)
+      this.orders = this.orders.filter(o => o.orderId !== orderId);
+      alert("Purchased successfuly")
+    } catch (error) {
+      console.error("Failed", error)
+    }
+  }
+
 }
