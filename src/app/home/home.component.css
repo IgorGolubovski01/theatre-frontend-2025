@@ -131,17 +131,16 @@ mat-card-actions {
   object-fit: cover;
 }
 
-.error-class{
-  margin-top: 100px;
-  text-align: center;
-  width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.err {
-  background-color: #0f1429;
-  border: solid 2px #992be8;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #992be8, 0 0 20px #992be8;
+
+.sold-out-btn {
+  background-color: #8b0000;
+  color: white !important;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: not-allowed;
+  opacity: 0.9;
+  box-shadow: 0 0 8px red;
 }

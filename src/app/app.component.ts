@@ -28,6 +28,7 @@ export class AppComponent {
 
   public doLogout(){
     localStorage.removeItem('active');
+    this.router.navigate(['/home'])
   }
 
   public scrollToTop() {

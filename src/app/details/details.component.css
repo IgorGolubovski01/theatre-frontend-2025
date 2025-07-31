@@ -94,3 +94,13 @@ mat-card-title {
 .mat-chip-action i {
   color: white;
 }
+
+.sold-out-chip {
+  background-color: #8b0000 !important;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 8px red;
+  border-color: #8b0000 !important;
+  cursor: not-allowed;
+  user-select: none;
+}

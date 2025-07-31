@@ -9,7 +9,7 @@
         <div class="text-content">
           <p>{{ p.longDescription }}</p>
           <p>Duration: {{p.duration}}min.</p>
-          <p>Projection date: {{utilService.formDate(p.projectionDate.toString())}}</p>
+          <p>Projection date: {{p.projectionDate | date:'short'}}</p>
           <p>Actors:
             <span *ngFor="let a of p.actors; let last = last">
               {{ a.name }}<span *ngIf="!last">, </span>
@@ -30,17 +30,23 @@
           </div>
 
           <div class="right-chip">
-            <mat-chip class="mat-chip-action" *ngIf="service.getActiveUser()">
-              <a [routerLink]="['/add-to-cart', p.projectionId]">
-                <i class="fa-solid fa-cart-shopping"></i> Add To Cart
-              </a>
-            </mat-chip>
+            <ng-container *ngIf="p.projectionCapacity > p.soldTickets; else soldOutChip">
+              <mat-chip class="mat-chip-action" *ngIf="service.getActiveUser()">
+                <a [routerLink]="['/add-to-cart', p.projectionId]">
+                  <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+                </a>
+              </mat-chip>
 
-            <mat-chip class="mat-chip-action" *ngIf="!service.getActiveUser()">
-              <a routerLink="/login">
-                <i class="fa-solid fa-cart-shopping"></i> Add To Cart
-              </a>
-            </mat-chip>
+              <mat-chip class="mat-chip-action" *ngIf="!service.getActiveUser()">
+                <a routerLink="/login">
+                  <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+                </a>
+              </mat-chip>
+            </ng-container>
+
+            <ng-template #soldOutChip>
+              <mat-chip class="sold-out-chip">SOLD OUT</mat-chip>
+            </ng-template>
           </div>
         </div>
       </mat-card-footer>

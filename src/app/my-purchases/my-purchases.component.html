@@ -1,1 +1,23 @@
-<p>my-purchases works!</p>
+<app-error *ngIf="error" [error]="error"></app-error>
+
+<div class="wrap">
+  <mat-card class="order-card" appearance="outlined" *ngFor="let o of orders">
+    <div class="order-header">
+      <img src="/assets/The Unknown.jpg" class="order-img" />
+      <div class="order-text">
+        <h3 class="order-title">Order for: {{ o.projectionName }}</h3>
+        <p class="order-date">{{ }}</p> 
+        <p class="order-quantity">Quantity: {{ o.tickets.length }}</p>
+        <p class="order-price">Price paid: {{ o.tickets.length * 5 }}$</p>
+      </div>
+    </div>
+
+    
+  </mat-card>
+
+  <div *ngIf="orders && orders.length === 0 && !error" class="empty" >
+      <h2>Your cart is empty.</h2>
+    </div>
+</div>
+
+<app-loading *ngIf="!error && !orders"></app-loading>

@@ -2,16 +2,19 @@ import { Component } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
 import { ProjectionModel } from '../models/projection.model';
 import { ProjectionService } from '../services/projection.service';
-import { NgIf } from '@angular/common';
+import { DatePipe, NgIf } from '@angular/common';
 import { UtilsService } from '../services/utils.service';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
+import { AxiosError } from 'axios';
+import { LoadingComponent } from "../loading/loading.component";
+import { ErrorComponent } from "../error/error.component";
 
 
 @Component({
   selector: 'app-show-times',
-  imports: [MatTableModule, NgIf, MatButtonModule, RouterLink, MatCardModule],
+  imports: [MatTableModule, NgIf, MatButtonModule, RouterLink, MatCardModule, LoadingComponent, ErrorComponent, DatePipe],
   templateUrl: './show-times.component.html',
   styleUrl: './show-times.component.css'
 })
@@ -23,6 +26,7 @@ export class ShowTimesComponent {
     constructor(public utils: UtilsService){
       ProjectionService.getProjections()
       .then(rsp=>this.dataSource = rsp.data)
+      .catch((e: AxiosError) => this.error = `${e.code}: ${e.message}`)
     }
 
 }

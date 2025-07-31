@@ -1,1 +1,33 @@
-<p>about works!</p>
+<div class="about-wrapper">
+  <mat-card class="about-card">
+    <mat-card-header>
+      <mat-card-title>About 1001 Films</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <p>
+        Welcome to 1001 Films — your gateway to unforgettable cinematic journeys. From timeless classics to the latest blockbusters, we bring stories to life on the big screen.
+      </p>
+      <p>
+        Founded with passion for film, 1001 Films is more than just a cinema — it's a community of movie lovers. We offer premium screenings, curated film events, and exclusive premieres.
+      </p>
+      <p>
+        Join us for a world of stories, stunning visuals, and shared experiences — all in one place.
+      </p>
+    </mat-card-content>
+
+    <mat-card-footer class="signature">
+      🎬 The 1001 Films Team
+    </mat-card-footer>
+
+    <div class="map-container">
+      <iframe
+        [src]="generateMapLink() | safe"
+        class="map-frame"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </mat-card>
+</div>

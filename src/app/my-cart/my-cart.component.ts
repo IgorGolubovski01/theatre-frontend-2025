@@ -1,22 +1,24 @@
 import { Component } from '@angular/core';
 import { CartService } from '../services/cart.service';
-import { UserService } from '../services/user.service';
 import { OrderModel } from '../models/order.model';
 import { MatCardModule } from '@angular/material/card';
-import { DatePipe, NgFor } from '@angular/common';
+import { DatePipe, NgFor, NgIf } from '@angular/common';
 import { ProjectionService } from '../services/projection.service';
 import { UtilsService } from '../services/utils.service';
+import { AxiosError } from 'axios';
+import { ErrorComponent } from "../error/error.component";
+import { LoadingComponent } from "../loading/loading.component";
 
 
 @Component({
   selector: 'app-my-cart',
-  imports: [MatCardModule, NgFor, DatePipe],
+  imports: [ MatCardModule, NgFor, DatePipe, ErrorComponent, NgIf, LoadingComponent],
   templateUrl: './my-cart.component.html',
   styleUrl: './my-cart.component.css'
 })
 export class MyCartComponent {
 
-
+  public error : string|null = null
   orders: OrderModel[] = [];
   service = UtilsService
   constructor() {
@@ -40,8 +42,8 @@ export class MyCartComponent {
                 const response = await ProjectionService.getProjectionById(projectionId);
                 const projectionName = response.data.name;
                 return { ...order, projectionName };
-              } catch (err) {
-                console.error('Error fetching projection:', err);
+              } catch (error) {
+                console.error('Error fetching projection:', error);
               }
             }
 
@@ -51,9 +53,7 @@ export class MyCartComponent {
 
         this.orders = enrichedOrders;
       })
-      .catch(error => {
-        console.error('Failed to load cart items.', error);
-      });
+      .catch((e: AxiosError) => this.error = `${e.code}: ${e.message}`)
   }
 
   deleteCart(id: number) {

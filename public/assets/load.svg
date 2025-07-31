@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg id="eHbqpzgkE8f1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 600" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="600" height="600">
+<style><![CDATA[
+  #eHbqpzgkE8f3_to {animation: eHbqpzgkE8f3_to__to 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f3_to__to { 0% {transform: translate(102px,310px)} 16.666667% {transform: translate(102px,310px)} 33.333333% {transform: translate(102px,311px)} 66.666667% {transform: translate(102px,310px)} 100% {transform: translate(102px,310px)}}
+  #eHbqpzgkE8f5 {
+    animation-name: eHbqpzgkE8f5_s_do, eHbqpzgkE8f5_s_da;
+    animation-duration: 600ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-iteration-count: infinite;  
+  }
+  @keyframes eHbqpzgkE8f5_s_do { 0% {stroke-dashoffset: 106.830000} 66.666667% {stroke-dashoffset: 106.830000} 100% {stroke-dashoffset: 92.586000}}
+  @keyframes eHbqpzgkE8f5_s_da { 0% {stroke-dasharray: 106.830000} 66.666667% {stroke-dasharray: 106.830000} 100% {stroke-dasharray: 106.830000}}
+  #eHbqpzgkE8f6_to {animation: eHbqpzgkE8f6_to__to 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f6_to__to { 0% {transform: translate(102px,284.920000px)} 33.333333% {transform: translate(102px,290.920000px)} 66.666667% {transform: translate(102px,287.920000px)} 100% {transform: translate(102px,287.920000px)}}
+  #eHbqpzgkE8f7_ts {animation: eHbqpzgkE8f7_ts__ts 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f7_ts__ts { 0% {transform: translate(102px,293px) scale(1,1.082712)} 33.333333% {transform: translate(102px,293px) scale(1,0)} 66.666667% {transform: translate(102px,293px) scale(1,1.529411)} 100% {transform: translate(102px,293px) scale(1,1.529411)}}
+  #eHbqpzgkE8f8_tr {animation: eHbqpzgkE8f8_tr__tr 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f8_tr__tr { 0% {transform: translate(300px,300px) rotate(0deg)} 100% {transform: translate(300px,300px) rotate(72deg)}}
+  #eHbqpzgkE8f9_to {animation: eHbqpzgkE8f9_to__to 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f9_to__to { 0% {transform: translate(300px,100px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 33.333333% {transform: translate(300px,300px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 83.333333% {transform: translate(300px,100px)} 100% {transform: translate(300px,100px)}}
+  #eHbqpzgkE8f9_ts {animation: eHbqpzgkE8f9_ts__ts 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f9_ts__ts { 0% {transform: scale(1,1);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 33.333333% {transform: scale(0.500000,0.500000);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 83.333333% {transform: scale(1,1)} 100% {transform: scale(1,1)}}
+  #eHbqpzgkE8f10_to {animation: eHbqpzgkE8f10_to__to 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f10_to__to { 0% {transform: translate(473.205081px,200px)} 83.333333% {transform: translate(473.205081px,200px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 100% {transform: translate(386.602540px,250px)}}
+  #eHbqpzgkE8f10_ts {animation: eHbqpzgkE8f10_ts__ts 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f10_ts__ts { 0% {transform: scale(1,1)} 83.333333% {transform: scale(1,1);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 100% {transform: scale(0.750000,0.750000)}}
+  #eHbqpzgkE8f15_tr {animation: eHbqpzgkE8f15_tr__tr 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f15_tr__tr { 0% {transform: translate(300px,300px) rotate(0deg)} 100% {transform: translate(300px,300px) rotate(144deg)}}
+  #eHbqpzgkE8f16_tr {animation: eHbqpzgkE8f16_tr__tr 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f16_tr__tr { 0% {transform: translate(300px,300px) rotate(0deg);animation-timing-function: cubic-bezier(0.520000,0.005000,0.495000,0.990000)} 100% {transform: translate(300px,300px) rotate(72deg)}}
+  #eHbqpzgkE8f17_tr {animation: eHbqpzgkE8f17_tr__tr 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f17_tr__tr { 0% {transform: translate(300px,300px) rotate(0deg);animation-timing-function: cubic-bezier(0.730000,0.005000,0.495000,0.990000)} 100% {transform: translate(300px,300px) rotate(72deg)}}
+  #eHbqpzgkE8f18_tr {animation: eHbqpzgkE8f18_tr__tr 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f18_tr__tr { 0% {transform: translate(299.477074px,299.094265px) rotate(0deg);animation-timing-function: cubic-bezier(0.955000,0,0.495000,0.990000)} 100% {transform: translate(299.477074px,299.094265px) rotate(72deg)}}
+  #eHbqpzgkE8f19_tr {animation: eHbqpzgkE8f19_tr__tr 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f19_tr__tr { 0% {transform: translate(299.477074px,299.094265px) rotate(0deg);animation-timing-function: cubic-bezier(1,0.005000,0.865000,0.985000)} 100% {transform: translate(299.477074px,299.094265px) rotate(72deg)}}
+  #eHbqpzgkE8f21_tr {animation: eHbqpzgkE8f21_tr__tr 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f21_tr__tr { 0% {transform: translate(300px,300px) rotate(90deg)} 100% {transform: translate(300px,300px) rotate(234deg)}}
+  #eHbqpzgkE8f22_tr {animation: eHbqpzgkE8f22_tr__tr 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f22_tr__tr { 0% {transform: translate(300px,300px) rotate(90deg)} 100% {transform: translate(300px,300px) rotate(234deg)}}
+  #eHbqpzgkE8f22 {animation: eHbqpzgkE8f22_s_do 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f22_s_do { 0% {stroke-dashoffset: 1602.210000} 100% {stroke-dashoffset: 2243.094000}}
+  #eHbqpzgkE8f25_to {animation: eHbqpzgkE8f25_to__to 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f25_to__to { 0% {transform: translate(-139.937378px,253.304352px)} 100% {transform: translate(-49.937378px,253.304352px)}}
+  #eHbqpzgkE8f34_to {animation: eHbqpzgkE8f34_to__to 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f34_to__to { 0% {transform: translate(190px,180px);animation-timing-function: cubic-bezier(0.550000,0.055000,0.675000,0.190000)} 100% {transform: translate(190px,306px)}}
+  #eHbqpzgkE8f34_tr {animation: eHbqpzgkE8f34_tr__tr 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f34_tr__tr { 0% {transform: rotate(-18.203964deg)} 100% {transform: rotate(0deg)}}
+  #eHbqpzgkE8f35_to {animation: eHbqpzgkE8f35_to__to 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f35_to__to { 0% {transform: translate(395px,438.432121px);animation-timing-function: cubic-bezier(0.215000,0.610000,0.355000,1)} 100% {transform: translate(395px,291.330731px)}}
+  #eHbqpzgkE8f35_ts {animation: eHbqpzgkE8f35_ts__ts 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f35_ts__ts { 0% {transform: scale(1,0.750794)} 33.333333% {transform: scale(1,1.013514)} 100% {transform: scale(1,1.006757)}}
+  #eHbqpzgkE8f38_to {animation: eHbqpzgkE8f38_to__to 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f38_to__to { 0% {transform: translate(320.012009px,300px)} 83.333333% {transform: translate(350.012009px,300px)} 100% {transform: translate(320.012009px,300px)}}
+  #eHbqpzgkE8f39 {
+    animation-name: eHbqpzgkE8f39__rd, eHbqpzgkE8f39__tt;
+    animation-duration: 600ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-iteration-count: infinite;  
+  }
+  @keyframes eHbqpzgkE8f39__rd { 0% {} 83.333333% {} 100% {}}
+  @keyframes eHbqpzgkE8f39__tt { 0% {transform: translate(-100px,-100px)} 83.333333% {transform: translate(-100px,-100px)} 100% {transform: translate(-100px,0px)}}
+  #eHbqpzgkE8f39_to {animation: eHbqpzgkE8f39_to__to 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f39_to__to { 0% {transform: translate(220px,350px)} 83.333333% {transform: translate(220px,350px)} 100% {transform: translate(350px,350px)}}
+  #eHbqpzgkE8f39_tr {animation: eHbqpzgkE8f39_tr__tr 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f39_tr__tr { 0% {transform: rotate(0deg)} 83.333333% {transform: rotate(90deg)} 100% {transform: rotate(90deg)}}
+  #eHbqpzgkE8f39_ts {animation: eHbqpzgkE8f39_ts__ts 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f39_ts__ts { 0% {transform: scale(0.800000,0.800000)} 83.333333% {transform: scale(1,1)} 100% {transform: scale(1,1)}}
+  #eHbqpzgkE8f40_tr {animation: eHbqpzgkE8f40_tr__tr 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f40_tr__tr { 0% {transform: translate(460px,350px) rotate(90deg)} 83.333333% {transform: translate(460px,350px) rotate(180deg)} 100% {transform: translate(460px,350px) rotate(180deg)}}
+  #eHbqpzgkE8f40_ts {animation: eHbqpzgkE8f40_ts__ts 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f40_ts__ts { 0% {transform: scale(0.800000,0.800000)} 83.333333% {transform: scale(0.400000,0.400000)} 100% {transform: scale(0.400000,0.400000)}}
+  #eHbqpzgkE8f40 {animation: eHbqpzgkE8f40_c_o 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f40_c_o { 0% {opacity: 1} 66.666667% {opacity: 1} 83.333333% {opacity: 0} 100% {opacity: 0}}
+  #eHbqpzgkE8f41 {
+    animation-name: eHbqpzgkE8f41__rd, eHbqpzgkE8f41__tt;
+    animation-duration: 600ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-iteration-count: infinite;  
+  }
+  @keyframes eHbqpzgkE8f41__rd { 0% {} 83.333333% {} 100% {}}
+  @keyframes eHbqpzgkE8f41__tt { 0% {transform: translate(-100px,0px)} 83.333333% {transform: translate(-100px,0px)} 100% {transform: translate(-0px,0px)}}
+  #eHbqpzgkE8f41_to {animation: eHbqpzgkE8f41_to__to 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f41_to__to { 0% {transform: translate(350px,350px)} 83.333333% {transform: translate(350px,350px)} 100% {transform: translate(460px,350px)}}
+  #eHbqpzgkE8f41_tr {animation: eHbqpzgkE8f41_tr__tr 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f41_tr__tr { 0% {transform: rotate(90deg)} 83.333333% {transform: rotate(180deg)} 100% {transform: rotate(180deg)}}
+  #eHbqpzgkE8f41_ts {animation: eHbqpzgkE8f41_ts__ts 600ms linear infinite normal forwards}
+  @keyframes eHbqpzgkE8f41_ts__ts { 0% {transform: scale(1,1)} 83.333333% {transform: scale(0.400000,0.400000)} 100% {transform: scale(0.400000,0.400000)}}
+]]></style>
+
+<g id="eHbqpzgkE8f3_to" transform="translate(102 310)">
+  <circle id="eHbqpzgkE8f4" cx="10" cy="10" r="10" fill="#962be6" />
+  <path id="eHbqpzgkE8f5" d="M15,20 A10 10 0 1 1 10 20" fill="none" stroke="#962be6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+
+<g id="eHbqpzgkE8f6_to" transform="translate(102 284.92)">
+  <circle id="eHbqpzgkE8f7" cx="11" cy="9" r="11" fill="#962be6" />
+  <ellipse id="eHbqpzgkE8f8" cx="11" cy="10" rx="10" ry="4" fill="#962be6" />
+</g>
+
+<g id="eHbqpzgkE8f9_to" transform="translate(300 100)" style="transform-origin:300px 100px;">
+  <circle id="eHbqpzgkE8f10" cx="20" cy="20" r="20" fill="#962be6" />
+</g>
+
+<g id="eHbqpzgkE8f15_tr" transform="translate(300 300)">
+  <circle id="eHbqpzgkE8f16" cx="45" cy="0" r="45" fill="#962be6" />
+  <circle id="eHbqpzgkE8f17" cx="45" cy="0" r="45" fill="#962be6" />
+</g>
+
+<g id="eHbqpzgkE8f18_tr" transform="translate(299.477074 299.094265)">
+  <circle id="eHbqpzgkE8f19" cx="45" cy="0" r="45" fill="#962be6" />
+  <circle id="eHbqpzgkE8f20" cx="45" cy="0" r="45" fill="#962be6" />
+</g>
+
+<g id="eHbqpzgkE8f21_tr" transform="translate(300 300) rotate(90)">
+  <circle id="eHbqpzgkE8f22" cx="100" cy="0" r="100" fill="none" stroke="#962be6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+
+<g id="eHbqpzgkE8f25_to" transform="translate(-139.937378 253.304352)">
+  <circle id="eHbqpzgkE8f26" cx="5" cy="5" r="5" fill="#962be6" />
+  <circle id="eHbqpzgkE8f27" cx="15" cy="5" r="5" fill="#962be6" />
+</g>
+
+<g id="eHbqpzgkE8f34_to" transform="translate(190 180)">
+  <rect id="eHbqpzgkE8f35" x="0" y="0" width="10" height="10" fill="#962be6" />
+</g>
+
+<g id="eHbqpzgkE8f35_to" transform="translate(395 438.432121)">
+  <ellipse id="eHbqpzgkE8f36" cx="7" cy="7" rx="7" ry="4" fill="#962be6" />
+</g>
+
+<g id="eHbqpzgkE8f38_to" transform="translate(320.012009 300)">
+  <circle id="eHbqpzgkE8f39" cx="8" cy="8" r="8" fill="#962be6" />
+</g>
+
+<g id="eHbqpzgkE8f40_tr" transform="translate(460 350) rotate(90)">
+  <circle id="eHbqpzgkE8f41" cx="5" cy="5" r="5" fill="#962be6" />
+</g>
+</svg>

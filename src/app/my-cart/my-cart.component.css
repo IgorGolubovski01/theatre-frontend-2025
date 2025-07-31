@@ -98,3 +98,17 @@ mat-card-actions {
   box-shadow: 0 0 18px rgba(255, 77, 77, 0.8);
   transform: translateY(-2px);
 }
+
+.empty {
+  background-color: #0f1429  !important;
+  border: solid 2px #992be8 !important;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #992be8, 0 0 20px #992be8 !important;
+  margin-top: 100px;
+  text-align: center;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  padding: 20px;
+}

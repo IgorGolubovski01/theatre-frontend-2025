@@ -1,11 +1,4 @@
-<div *ngIf="error" class="error-class">
-    <mat-card class="err" appearance="outlined" color="red">
-        <mat-card-content>
-            <h1>Oops, an error has occured!</h1>
-            <p style="color:red;">{{error}}</p>
-        </mat-card-content>
-    </mat-card> 
-</div>
+<app-error *ngIf="error" [error]="error"></app-error>
 
 <div *ngIf="projections" class="projections-wrapper">
 
@@ -27,13 +20,11 @@
 
   <div class="projections-container">
     <mat-card class="example-card" appearance="outlined" *ngFor="let p of filteredProjections">
-      <!-- TODO -->
-      <!-- Promeniti u p.name  -->
       <img mat-card-image [src]="'assets/' + 'The Unknown' + '.jpg'" alt="Movie poster" class="movie-poster">
 
       <mat-card-content>
         <h1 class="movie-title">{{p.name}}</h1>
-        <p><strong>Date & Time:</strong> {{ p.projectionDate | date:'MMMM d, y - HH:mm' }}</p>
+        <p><strong>Date & Time:</strong> {{ p.projectionDate | date:'short' }}</p>
         <p>Genre: {{p.genre.genreName}}</p>
         <p><strong>Duration:</strong> {{p.duration}}</p>
         <p><strong>Directed by:</strong> {{p.director}}</p>
@@ -44,13 +35,20 @@
         <a mat-button class="btn-purple details-btn" [routerLink]="['/details/', p.projectionId]">
           <i class="fa-solid fa-arrow-up-right-from-square"></i> Details
         </a>
-        <button mat-button class="btn-purple book-btn" [routerLink]="['add-to-cart', p.projectionId]" *ngIf="service.getActiveUser()">
-             Add To Cart
-        </button>
 
-        <a mat-button class="btn-purple book-btn" routerLink="/login" *ngIf="!service.getActiveUser()">
-          <i class="fa-solid fa-cart-shopping"></i> Add To Cart
-        </a>
+        <ng-container *ngIf="p.projectionCapacity > p.soldTickets; else soldOutBlock">
+          <button mat-button class="btn-purple book-btn" [routerLink]="['add-to-cart', p.projectionId]" *ngIf="service.getActiveUser()">
+            Add To Cart
+          </button>
+
+          <a mat-button class="btn-purple book-btn" routerLink="/login" *ngIf="!service.getActiveUser()">
+            <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+          </a>
+        </ng-container>
+
+        <ng-template #soldOutBlock>
+          <button mat-button class="sold-out-btn" disabled>SOLD OUT</button>
+        </ng-template>
       </mat-card-actions>
     </mat-card>
   </div>
